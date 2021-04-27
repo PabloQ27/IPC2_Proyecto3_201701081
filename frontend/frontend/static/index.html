@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Principal</title>     
+        <link rel="stylesheet" href="{% static 'estilos.css' %}">            
+        <link rel="stylesheet" href="{% static 'font-awesome.css' %}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{% static 'main.js' %}"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <ul class="tabs">
+                <li><a href="#tab1"><span class="fa fa-home"></span><span> Inicio</span></a></li>
+                <li><a href="#tab2"><span class="fa fa-clipboard"></span><span> Peticiones</span></a></li>
+                <li><a href="#tab3"><span class="fa fa-question-circle"></span><span> Ayuda</span></a></li>
+            </ul>
+
+            <div class="secciones"> 
+                <article id="tab1">
+                    <p>para 1</p>
+                    <label for="arch">Seleccione un archivo xml</label><br>
+                    <input type="file" id="arch" name="arch" accept=".xml"> <br><br><br>      
+                    
+                    <table style="width: 100%">
+                        <tr>
+                            <th><p><button >Enviar</button></p></th>
+                            <th><p><button>Reset</button></p></th>
+
+                        </tr>
+                        <tr>
+                            <th><p><textarea name="tarea1" id="t1" cols="30" rows="10"></textarea></p></textarea></th>
+                            <th><p><textarea name="tarea2" id="t2" cols="30" rows="10"></textarea></p></th>
+                        </tr>
+                    </table>
+                    
+                    
+                </article>
+                <article id="tab2">
+                    <p>para 2</p>
+                </article>
+                <article id="tab3">
+                    <p>para 3</p>
+                </article>
+            </div>
+        </div>
+    </body>
+</html>
