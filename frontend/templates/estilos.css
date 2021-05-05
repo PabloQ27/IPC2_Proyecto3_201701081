@@ -12,9 +12,9 @@ body{
 }
 
 .wrap{
-	width: 800px;
-	max-width: 90%;
-	margin: 30px auto;
+	width: 1300px;
+	max-width: 99%;
+	margin: 9px auto;
 }
 
 
@@ -44,7 +44,7 @@ ul.tabs li a{
 }
 
 ul.tabs li a .tab-text{
-	margin-left: 8px;
+	margin-left: 5px;
 }
 
 .secciones{
@@ -53,7 +53,7 @@ ul.tabs li a .tab-text{
 }
 
 .secciones article{
-	padding: 30px;
+	padding: 25px;
 }
 
 .secciones article p{
@@ -79,6 +79,6 @@ ul.tabs li a .tab-text{
 	}
 
 	.secciones article{
-		padding: 20px;
+		padding: 50px;
 	}
 }

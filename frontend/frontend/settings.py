@@ -55,7 +55,7 @@ ROOT_URLCONF = 'frontend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/otrop/Desktop/IPC2_Proyecto3_201701081/frontend/frontend/static'],
+        'DIRS':  ['C:/Users/otrop/Desktop/IPC2_Proyecto3_201701081/frontend/frontend/static'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,9 +119,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ['C:/Users/otrop/Desktop/IPC2_Proyecto3_201701081/frontend/frontend/static'
-    #os.path.join(BASE_DIR, "static")
-]
+STATICFILES_DIRS = ['C:/Users/otrop/Desktop/IPC2_Proyecto3_201701081/frontend/frontend/static/static']
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
