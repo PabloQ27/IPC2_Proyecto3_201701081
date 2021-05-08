@@ -18,7 +18,7 @@
 		Guatemala, 25/04/2021
 		Reportado por: barni@ing.usac.edu.gt
 		Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt, 
-		moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
+		moe@ing.usac.edu.gt, <bart@ing.usac.edu.gt>
 		Error: 20003 - Sobrecarga de informacion
 	</EVENTO>
 	<EVENTO>
@@ -38,7 +38,7 @@
 		Guatemala, 30/04/2021
 		Reportado por: mrburns@ing.usac.edu.gt
 		Usuarios afectados: apu@ing.usac.edu.gt, ned@ing.usac.edu.gt,
-		edna@ing.usac.edu.gt, moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
+		edna@ing.usac.edu.gt, moe@ing.usac.edu.gt, "bart@ing.usac.edu.gt"
 		Error: 20004 - Demasiados registros enviados,
 		no hay suficiente espacio de almacenamiento.
 	</EVENTO>
@@ -46,7 +46,7 @@
 		Guatemala, 30/04/2021
 		Reportado por: milhouse@ing.usac.edu.gt
 		Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt,
-		bart@ing.usac.edu.gt, moe@ing.usac.edu.gt
+		bart@ing.usac.edu.gt, 'moe@ing.usac.edu.gt'
 		Error: 20003 - Sobrecarga de informacion
 	</EVENTO>
 	<EVENTO>

@@ -3,12 +3,12 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Principal</title>     
-        
-                    
-        <link rel="stylesheet" href="estilos.css">            
-        <link rel="stylesheet" href='font-awesome.css'>
-        <script src="main.js"></script>
+        <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+        <title>Principal</title>                 
+        <link rel="stylesheet" href="static/estilos.css">            
+        <link rel="stylesheet" href='static/font-awesome.css'>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="static/main.js"></script>
 
         <link rel="stylesheet" href="{% static '/estilos.css' %}"   type="text/css" media="screen"> 
         <link rel="stylesheet" href="{% static '/font-awesome.css' %}">  
@@ -30,15 +30,15 @@
                     <p>para 1</p>
                     <label for="arch">Seleccione un archivo xml</label><br>
 
-                    <form  enctype="multipart/form-data"  method="post">                      
-                        <input type="file"  name="documento" > <br><br><br> 
+                    <form  enctype="multipart/form-data"  method="post">                     
+                        <input type="file"  name="documento" ><br>   
                         {% csrf_token %}
-                        <input type="submit" value="Enviar">   
+                        <input type="submit" value="Mostrar"><br><br><br>   
                     </form>           
 
                     <table style="width: 110%">
                         <tr >
-                            <th><p></p></th>
+                            <th><p><button id="enviar">Enviar</button></p></th>
                             <th><p><button id="reset">Reset</button></p></th>
 
                         </tr>

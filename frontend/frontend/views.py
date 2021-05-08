@@ -7,38 +7,45 @@ from django.views.decorators.csrf import csrf_protect
 from django.shortcuts import render
 import xml.etree.ElementTree as ET
 import re
+import requests
+from .forms import Archivo
 
+endpoint = "http://127.0.0.1:4000/"
 def format(cadena):
     mydoc = ET.tostring(archivo, 'utf-8').decode('utf8')
     reescribe = minidom.parseString(mydoc)
     return reescribe.toprettyxml(indent="  ")
 
-def home(request):
+def home(request): 
     if request.method == 'POST':
-        archivo = request.FILES['documento'].read()
-        
+        archivo = request.FILES['documento'].read()    
+        print(archivo)     
         n = str(archivo).replace('\\n', '\n')
         r = n.replace('\\r', '\r')
         x = r.replace('\\x', '')
         x= x.replace("'",'')
+        x = x.replace('b', '', 1)
         cadena = x.replace('\\t', '    ')
-        print(cadena)
 
-        c = ({"archivo_xml": cadena})      
+        print(cadena)
+        c = {"archivo_xml": cadena}  
+        
+        r = requests.post(endpoint+'doc', json=c)
+
         return render(request, "index.html", c)
         #return HttpResponse(archivo)
     doc_index = loader.get_template('index.html')
     docin = doc_index.render()
     return render(request, "index.html")
-   
+ 
 
 
 def carga_documento(request):
-    c = {}
-    print("..............")
-    archivo = request.FILES['documento']
-    print(archivo)
-    return HttpResponse(archivo)
+    
+    myobj = {'somekey': 'somevalue'}
+    x = requests.post(endpoint+'prueba', json= myobj)
+    print(x.text)
+    return HttpResponse(x)
         
 
 

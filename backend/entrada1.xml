@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EVENTOS>
+	<EVENTO>
+		Guatemala, 20/04/2021
+		Reportado por: bart@ing.usac.edu.gt
+		Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt
+		Error: 20001 - Desbordamiento de búfer de memoria RAM
+		en el servidor de correo electrónico.
+	</EVENTO>	
+</EVENTOS>

@@ -121,7 +121,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ['C:/Users/otrop/Desktop/IPC2_Proyecto3_201701081/frontend/frontend/static/static']
 
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type
