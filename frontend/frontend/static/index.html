@@ -30,11 +30,17 @@
                     <p>para 1</p>
                     <label for="arch">Seleccione un archivo xml</label><br>
 
+
+                    
                     <form  enctype="multipart/form-data"  method="post">                     
                         <input type="file"  name="documento" ><br>   
                         {% csrf_token %}
                         <input type="submit" value="Mostrar"><br><br><br>   
                     </form>           
+
+
+
+
 
                     <table style="width: 110%">
                         <tr >

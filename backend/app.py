@@ -82,25 +82,56 @@ def read_xml_back(): #extrae todo del xml y lo introduce a las listas
                 continue
             else:
                 #print(linea.strip(' '))
-                pasar_cadena(linea.strip(' ')) 
-        '''
-        print(fecha_a)
-        print(report_a)
-        print(usuarios_a)
-        print(error_a)   
-        '''    
+                pasar_cadena(linea.strip(' '))  
         eve = Evento(fecha_a, report_a, usuarios_a, error_a)
         list_event.append(eve)            
         templectura.close()
-    for x in list_event:
-        
+'''
+    for x in list_event:   
         print(x.fecha)
         print(x.report)
         print(x.usuarios)
         print(x.error)
+'''
 
+list_fecha = []
+def msj_fecha():
+    temp_fech = []
+    temp_fech2 = []
+    for x in list_event:
+        f = x.fecha.split(',')
+        f[1].strip('\n')
+        temp_fech.append(f[1].strip(' '))
+
+        temp_fech2.append(f[1].strip(' '))
+    
+    print('tamanio original-->',len(temp_fech))
+
+    cont=1
+    for x in range(len(temp_fech)):
+        print(x,'largo', len(temp_fech))
+        
+        if len(temp_fech) == 0:
+            break
+        
+        temp = temp_fech[0]
+        #print('tamanio despues de borrar', len(temp_fech))
+            
+        for z in range(len(temp_fech2)):
+            temp2 = temp_fech2[z]
+            if temp == temp2:
+                                   
+                print(x,' ',cont, 'fecha->', temp)
+                cont += 1
+                temp_fech.remove(temp)
+                #temp_fech.pop(x)  
+                    
+        cont = 1
+             
+      
 
 read_xml_back()
+msj_fecha()
 
     
         
