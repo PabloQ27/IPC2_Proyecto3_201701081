@@ -4,6 +4,8 @@ from xml.dom import minidom
 import requests
 import re
 from evento import Evento
+from fecha_frec import Fecha_Frec
+from correo import Correo_Fecha
 app = Flask(__name__)
 
 @app.route('/')
@@ -94,44 +96,110 @@ def read_xml_back(): #extrae todo del xml y lo introduce a las listas
         print(x.error)
 '''
 
-list_fecha = []
-def msj_fecha():
+list_fecha = [] #almacena objetos fecha_frec fechas sin repetir y cada una con la cantidad de msj enviados esa fecha
+list_correo = [] # todos los correos que reportaron, estan sin repetir correos 
+list_CoFe = [] # almacena objetos correo los correos con sus fechas y contadores
+def msj_fecha():#ingresa las fechas y sus frecuencias(cantidad de msj enviados esa fecha) a list_fecha
     temp_fech = []
     temp_fech2 = []
     for x in list_event:
         f = x.fecha.split(',')
         f[1].strip('\n')
         temp_fech.append(f[1].strip(' '))
-
         temp_fech2.append(f[1].strip(' '))
-    
-    print('tamanio original-->',len(temp_fech))
-
-    cont=1
+    #print('tamanio original-->',len(temp_fech))
+    cont=0
     for x in range(len(temp_fech)):
-        print(x,'largo', len(temp_fech))
-        
+        #print(x,'largo', len(temp_fech))
         if len(temp_fech) == 0:
             break
-        
         temp = temp_fech[0]
         #print('tamanio despues de borrar', len(temp_fech))
-            
         for z in range(len(temp_fech2)):
             temp2 = temp_fech2[z]
-            if temp == temp2:
-                                   
-                print(x,' ',cont, 'fecha->', temp)
+            if temp == temp2:          
+                #print(x,' ',cont, 'fecha->', temp)
                 cont += 1
                 temp_fech.remove(temp)
                 #temp_fech.pop(x)  
-                    
-        cont = 1
-             
-      
+        #print('frec-->', cont, 'fecha-->', temp, end='')
+        fech_frec_a = Fecha_Frec(temp, cont)   
+        list_fecha.append(fech_frec_a)         
+        cont = 0
+    for x in list_fecha:
+        print(x.fecha, x.frec)        
 
+def para_listCorre():#inserta los correos que reportora a list_correo
+    temp_c1 = []
+    temp_c2=[]
+    for x in list_event:
+        c = x.report.split(':')
+        temp_c1.append(c[1].strip(' '))
+        temp_c2.append(c[1].strip(' '))
+
+    for x in range(len(temp_c1)):
+        if len(temp_c1)== 0:
+            break
+        temp = temp_c1[0]
+        for z in range(len(temp_c2)):
+            temp2 = temp_c2[z]
+            if temp == temp2:
+                temp_c1.remove(temp)
+        list_correo.append(temp)
+    for x in list_correo:
+        print(x)
+def compara(fecha, correo):
+    cont = 0   
+    #print(fecha)
+    for x in list_event:
+        c = x.report.split(':')
+        c = c[1].strip(' ')
+        #print(x.fecha)
+        f = x.fecha.split(',')
+        f = f[1].strip(' ')
+        if fecha == f and correo == c:
+            cont += 1
+            
+    if cont > 0:
+        '''
+        print('correo->'+correo, end='')
+        print('# correos enviados ',cont)
+        print('fecha->'+fecha,end='')
+        print('----------')
+        '''
+        user = Correo_Fecha(correo, fecha, cont)     
+        list_CoFe.append(user) 
+    
+#metodo que recorra list_fecha y comparar esa fecha con fecha de list_event
+def reporte():
+    cont = 0
+    for x in range(len(list_fecha)):
+        for y in list_correo:
+            compara(list_fecha[x].fecha, y)
+
+    for x in list_CoFe:
+        print(x.correo, end ='')
+        print(x.fecha,end = '')
+        print(x.num_rep)
+
+def rep_user_afectado():
+    for x in range(len(list_fecha)):
+        cadena = ''
+        for z in list_event:
+            f = z.fecha.split(',')
+            f = f[1].strip(' ')
+            if list_fecha[x].fecha == f:
+                lista = z.usuarios.split(':')
+                lista = lista[1].strip(' ')
+                cadena += lista
+                #print(lista)
+        print(cadena)
+        print('----')
 read_xml_back()
 msj_fecha()
+para_listCorre()
+reporte()
+rep_user_afectado()
 
     
         
