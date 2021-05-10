@@ -28,29 +28,22 @@
             <div class="secciones"> 
                 <article id="tab1">
                     <p>para 1</p>
-                    <label for="arch">Seleccione un archivo xml</label><br>
-
-
-                    
+                    <label for="arch">Seleccione un archivo xml</label><br>  
                     <form  enctype="multipart/form-data"  method="post">                     
                         <input type="file"  name="documento" ><br>   
                         {% csrf_token %}
                         <input type="submit" value="Mostrar"><br><br><br>   
                     </form>           
-
-
-
-
-
                     <table style="width: 110%">
-                        <tr >
-                            <th><p><button id="enviar">Enviar</button></p></th>
-                            <th><p><button id="reset">Reset</button></p></th>
-
+                        <tr >         
+                            <form method="get">
+                                <th><p><input type="submit" value = "Enviar"></p></th>
+                            </form>
+                            <th><p><input type="submit" value = "Reset"></p></th>
                         </tr>
-                        <tr>
+                        <tr>          
                             <th><p><textarea name="tarea1" id="t1" cols="30" rows="10" style="width: 95%">{{ archivo_xml }}</textarea></p></textarea></th>
-                            <th><p><textarea name="tarea2" id="t2" cols="30" rows="10" style="width: 85%"></textarea></p></th>
+                        <th><p><textarea name="tarea2" id="t2" cols="30" rows="10" style="width: 85%"> {{ somekey }} </textarea></p></th>
                         </tr>
                     </table>
                     

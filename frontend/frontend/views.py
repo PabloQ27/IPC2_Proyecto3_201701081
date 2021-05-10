@@ -11,10 +11,6 @@ import requests
 from .forms import Archivo
 
 endpoint = "http://127.0.0.1:4000/"
-def format(cadena):
-    mydoc = ET.tostring(archivo, 'utf-8').decode('utf8')
-    reescribe = minidom.parseString(mydoc)
-    return reescribe.toprettyxml(indent="  ")
 
 def home(request): 
     if request.method == 'POST':
@@ -27,9 +23,8 @@ def home(request):
         x = x.replace('b', '', 1)
         cadena = x.replace('\\t', '    ')
 
-        print(cadena)
+        #print(cadena)
         c = {"archivo_xml": cadena}  
-        
         r = requests.post(endpoint+'doc', json=c)
 
         return render(request, "index.html", c)
@@ -38,14 +33,18 @@ def home(request):
     docin = doc_index.render()
     return render(request, "index.html")
  
-
+def cargar_el_xml(request):
+    r = requests.get(endpoint+'devolver')
+    doc = {'xml_salida': r.text}
+    return render(request, "index.html", doc)
 
 def carga_documento(request):
     
-    myobj = {'somekey': 'somevalue'}
-    x = requests.post(endpoint+'prueba', json= myobj)
+    x = requests.get(endpoint+'docsito')
     print(x.text)
-    return HttpResponse(x)
+    myobj = {'xml_salida': x.text}
+    
+    return render(request, "index.html", myobj)
         
 
 

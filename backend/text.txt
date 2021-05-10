@@ -1,0 +1,13 @@
+
+
+        Guatemala, 25/04/2021
+
+        Reportado por: nelson@ing.usac.edu.gt
+
+        Usuarios afectados: moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
+
+        Error: 20004 - Peticion no reconocida por el servidor,
+
+        not found error.
+
+    
