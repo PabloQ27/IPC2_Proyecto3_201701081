@@ -29,21 +29,23 @@
                 <article id="tab1">
                     <p>para 1</p>
                     <label for="arch">Seleccione un archivo xml</label><br>  
-                    <form  enctype="multipart/form-data"  method="post">                     
+                    <form  enctype="multipart/form-data"  method="POST">                     
                         <input type="file"  name="documento" ><br>   
                         {% csrf_token %}
                         <input type="submit" value="Mostrar"><br><br><br>   
                     </form>           
                     <table style="width: 110%">
                         <tr >         
-                            <form method="get">
+                            <form method="GET">
                                 <th><p><input type="submit" value = "Enviar"></p></th>
                             </form>
+                            <form method="GET">
                             <th><p><input type="submit" value = "Reset"></p></th>
+                            </form>
                         </tr>
                         <tr>          
                             <th><p><textarea name="tarea1" id="t1" cols="30" rows="10" style="width: 95%">{{ archivo_xml }}</textarea></p></textarea></th>
-                        <th><p><textarea name="tarea2" id="t2" cols="30" rows="10" style="width: 85%"> {{ somekey }} </textarea></p></th>
+                        <th><p><textarea name="tarea2" id="t2" cols="30" rows="10" style="width: 85%"> {{ xml_salida }} </textarea></p></th>
                         </tr>
                     </table>
                     

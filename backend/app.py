@@ -17,7 +17,7 @@ def index():
 
 @app.route('/prueba')
 def p():
-    
+    print('hi////////')
     return ("esta la prueba pal endpoint xd")
 
 @app.route('/doc', methods = ['POST'])
@@ -31,8 +31,9 @@ def leer_xml():
     print('-----')
     return res
 
-@app.route('/docsito')
-def inciar():
+
+@app.route('/devolver', methods = ['GET'])
+def pasar_xml():
     read_xml_back()
     msj_fecha()
     para_listCorre()
@@ -42,11 +43,8 @@ def inciar():
     compara_error()
     comparar2()
     genera_XML()
-
-@app.route('/devolver', methods = ['GET'])
-def pasar_xml():
-    
     print('--------------------------')
+    #print(xmlsalida)
     return xmlsalida
 list_event = []
 fecha_a = ''
@@ -303,8 +301,7 @@ def genera_XML():
     global xmlsalida
     root = ET.Element('ESTADISTICAS')
     est = ET.SubElement(root, 'ESTADISTICA')
-    
-    
+      
     for x in list_fecha:
         fech = ET.SubElement(est, 'FECHA')
         fech.text = x.fecha.strip('\n')
@@ -344,7 +341,7 @@ def genera_XML():
     xmlsalida = texto
     myfile.write(texto)
 
-'''
+'''  
 read_xml_back()
 msj_fecha()
 para_listCorre()
@@ -354,8 +351,8 @@ errores()
 compara_error()
 comparar2()
 genera_XML()
-
-'''    
+print(xmlsalida)
+''' 
         
 
 if __name__ == '__main__':

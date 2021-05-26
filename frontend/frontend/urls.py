@@ -23,8 +23,8 @@ from frontend import views
 urlpatterns = [
     path('adminn/', admin.site.urls),
     path('home/',views.home),
-    path('prueba/', views.carga_documento),
-    path('docxml/', views.cargar_el_xml)
+    path('prueba/', views.prueba),
+    #path('docxml/', views.cargar_el_xml)
 ]
 
 
