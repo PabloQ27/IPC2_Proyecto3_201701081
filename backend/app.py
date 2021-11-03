@@ -23,13 +23,15 @@ def p():
 @app.route('/doc', methods = ['POST'])
 def leer_xml():
     res = request.json
-    text = res['archivo_xml']
+    print(res["SOLICITUD_AUTORIZACION"])
+    
+    """ text = res['archivo_xml']
     myfile = open('xmltemp.xml', 'w') 
-    myfile.write(text)
-    #print(text)
+    myfile.write(text) """
+    
     #read_xml_back()
-    print('-----')
-    return res
+    print('aquitoy-----')
+    return "hi**********"
 
 
 @app.route('/devolver', methods = ['GET'])
@@ -43,7 +45,7 @@ def pasar_xml():
     compara_error()
     comparar2()
     genera_XML()
-    print('--------------------------')
+    print('--------------------------xdxd')
     #print(xmlsalida)
     return xmlsalida
 list_event = []

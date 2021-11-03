@@ -1,122 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<EVENTOS>
-    <EVENTO>
-        Guatemala, 20/04/2021
-        Reportado por: bart@ing.usac.edu.gt
-        Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt
-        Error: 20001 - Desbordamiento de bc3bafer de memoria RAM
-        en el servidor de correo electrc3b3nico.
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 20/04/2021
-        Reportado por: homero@ing.usac.edu.gt
-        Usuarios afectados: bart@ing.usac.edu.gt, lisa@ing.usac.edu.gt
-        Error: 20002 - Error de destino, momento equivocado,
-        lugar equivocado y medios equivocados
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 25/04/2021
-        Reportado por: barni@ing.usac.edu.gt
-        Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt, 
-        moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
-        Error: 20003 - Sobrecarga de informacion
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 20/04/2021
-        Reportado por: barni@ing.usac.edu.gt
-        Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt
-        Error: 20003 - Sobrecarga de informacion
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 25/04/2021
-        Reportado por: lisa@ing.usac.edu.gt
-        Usuarios afectados: moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
-        Error: 20002 - Error de destino, momento equivocado,
-        lugar equivocado y medios equivocados
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 30/04/2021
-        Reportado por: mrburns@ing.usac.edu.gt
-        Usuarios afectados: apu@ing.usac.edu.gt, ned@ing.usac.edu.gt,
-        edna@ing.usac.edu.gt, moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
-        Error: 20004 - Demasiados registros enviados,
-        no hay suficiente espacio de almacenamiento.
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 30/04/2021
-        Reportado por: milhouse@ing.usac.edu.gt
-        Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt,
-        bart@ing.usac.edu.gt, \moe@ing.usac.edu.gt\
-        Error: 20003 - Sobrecarga de informacion
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 20/04/2021
-        Reportado por: nelson@ing.usac.edu.gt
-        Usuarios afectados: edna@ing.usac.edu.gt, bart@ing.usac.edu.gt
-        Error: 20001 - Desbordamiento de bc3bafer de memoria RAM
-        en el servidor de correo electrc3b3nico.
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 25/04/2021
-        Reportado por: nelson@ing.usac.edu.gt
-        Usuarios afectados: moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
-        Error: 20003 - Sobrecarga de informacion
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 20/04/2021
-        Reportado por: Ralph321@ing.usac.edu.gt
-        Usuarios afectados: bart@ing.usac.edu.gt, lisa@ing.usac.edu.gt,
-        moe@ing.usac.edu.gt, skinner@ing.usac.edu.gt
-        Error: 20004 - Demasiados registros enviados,
-        no hay suficiente espacio de almacenamiento.
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 25/04/2021
-        Reportado por: Ralph321@ing.usac.edu.gt
-        Usuarios afectados: apu@ing.usac.edu.gt, ned@ing.usac.edu.gt,
-        edna@ing.usac.edu.gt, moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
-        Error: 20003 - Sobrecarga de informacion
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 30/04/2021
-        Reportado por: Ralph321@ing.usac.edu.gt
-        Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt
-        Error: 20001 - Desbordamiento de bc3bafer de memoria RAM
-        en el servidor de correo electrc3b3nico.
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 30/04/2021
-        Reportado por: Ralph321@ing.usac.edu.gt
-        Usuarios afectados: lisa@ing.usac.edu.gt
-        Error: 20003 - Sobrecarga de informacion
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 15/04/2021
-        Reportado por: carl092@ing.usac.edu.gt
-        Usuarios afectados: martin@ing.usac.edu.gt, maggy@ing.usac.edu.gt
-        Error: 20004 - Peticion no reconocida por el servidor,
-        not found error.
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 30/04/2021
-        Reportado por: milhouse@ing.usac.edu.gt
-        Usuarios afectados: homero@ing.usac.edu.gt, lisa@ing.usac.edu.gt,
-        bart@ing.usac.edu.gt, moe@ing.usac.edu.gt
-        Error: 20004 - Peticion no reconocida por el servidor,
-        not found error.
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 20/04/2021
-        Reportado por: nelson@ing.usac.edu.gt
-        Usuarios afectados: edna@ing.usac.edu.gt, bart@ing.usac.edu.gt
-        Error: 20004 - Peticion no reconocida por el servidor,
-        not found error.
-    </EVENTO>
-    <EVENTO>
-        Guatemala, 25/04/2021
-        Reportado por: nelson@ing.usac.edu.gt
-        Usuarios afectados: moe@ing.usac.edu.gt, bart@ing.usac.edu.gt
-        Error: 20004 - Peticion no reconocida por el servidor,
-        not found error.
-    </EVENTO>
-</EVENTOS>
+<SOLICITUD_AUTORIZACION>
+   <DTE>
+      <TIEMPO>
+         Nos encontramos en la Ciudad de Guatemala, 
+         con fecha 15/01/2021 y hora 15:25.
+      </TIEMPO>
+      <REFERENCIA>A1993</REFERENCIA>
+      <NIT_EMISOR>7378106</NIT_EMISOR>
+      <NIT_RECEPTOR>8338817</NIT_RECEPTOR>
+      <VALOR>220.00</VALOR>
+      <IVA>30.00</IVA>
+      <TOTAL>250.00</TOTAL>
+   </DTE>
+
+   <DTE>
+      <TIEMPO>Guatemala, Introduccion a la programacion
+      y computacion 2.
+      Fecha 14/12/2017 y 13:00 hrs.</TIEMPO>
+      <REFERENCIA>A2021</REFERENCIA>
+      <NIT_EMISOR>3216548</NIT_EMISOR>
+      <NIT_RECEPTOR>7898456</NIT_RECEPTOR>
+      <VALOR>100.00</VALOR>
+      <IVA>12.00</IVA>
+      <TOTAL>112.00</TOTAL>
+   </DTE>
+
+   <DTE>
+      <TIEMPO>
+         Guatemala, Proyecto #3
+         15/01/2021 -------- 15:25 hrs.
+      </TIEMPO>
+      <REFERENCIA>A1994</REFERENCIA>
+      <NIT_EMISOR>7898456</NIT_EMISOR>
+      <NIT_RECEPTOR>7378106</NIT_RECEPTOR>
+      <VALOR>150.00</VALOR>
+      <IVA>12.00</IVA>
+      <TOTAL>550.50</TOTAL>
+   </DTE>
+
+   <DTE>
+      <TIEMPO>
+         Ciudad de Guatemala 
+         -- ## 14/12/2017 // 15:25 hrs
+      </TIEMPO>
+      <REFERENCIA>A1992</REFERENCIA>
+      <NIT_EMISOR>8338817</NIT_EMISOR>
+      <NIT_RECEPTOR>3216548</NIT_RECEPTOR>
+      <VALOR>1364.44</VALOR>
+      <IVA>186.06</IVA>
+      <TOTAL>1550.50</TOTAL>
+   </DTE>
+
+
+</SOLICITUD_AUTORIZACION>

@@ -9,6 +9,8 @@ import xml.etree.ElementTree as ET
 import re
 import requests
 from .forms import Archivo
+import xmltodict
+import json
 
 endpoint = "http://127.0.0.1:4000/"
 val = 0
@@ -17,16 +19,21 @@ def home(request):
     global val, val2
     if request.method == 'POST' and val == 0 :
         val = 1
-        archivo = request.FILES['documento'].read()    
-        #print(archivo)     
-        n = str(archivo).replace('\\n', '\n')
+        archivo2 = request.FILES['documento'].read()
+        temp = archivo2
+        archivo = xmltodict.parse(temp)
+        json_data = json.dumps(archivo)
+        #print(archivo)
+        print(json_data)
+        
+        n = str(archivo2).replace('\\n', '\n')
         r = n.replace('\\r', '\r')
         x = r.replace('\\x', '')
         x= x.replace("'",'')
         x = x.replace('b', '', 1)
         cadena = x.replace('\\t', '    ')
         c = {"archivo_xml": cadena}  
-        r = requests.post(endpoint+'doc', json=c)
+        r = requests.post(endpoint+'doc', json = json_data) #aqui se va al back(muestra sin esto)
         return render(request, "index.html", c)
     elif val == 1 and request.method == 'GET' :
         val = 0

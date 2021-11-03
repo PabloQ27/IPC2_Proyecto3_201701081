@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOLICITUD_AUTORIZACION>
+   <DTE>
+      <TIEMPO>
+         Nos encontramos en la Ciudad de Guatemala, 
+         con fecha 15/01/2021 y hora 15:25.
+      </TIEMPO>
+      <REFERENCIA>A1993</REFERENCIA>
+      <NIT_EMISOR>7378106</NIT_EMISOR>
+      <NIT_RECEPTOR>8338817</NIT_RECEPTOR>
+      <VALOR>220.00</VALOR>
+      <IVA>30.00</IVA>
+      <TOTAL>250.00</TOTAL>
+   </DTE>
+
+   <DTE>
+      <TIEMPO>Guatemala, Introduccion a la programacion
+      y computacion 2.
+      Fecha 14/12/2017 y 13:00 hrs.</TIEMPO>
+      <REFERENCIA>A2021</REFERENCIA>
+      <NIT_EMISOR>3216548</NIT_EMISOR>
+      <NIT_RECEPTOR>7898456</NIT_RECEPTOR>
+      <VALOR>100.00</VALOR>
+      <IVA>12.00</IVA>
+      <TOTAL>112.00</TOTAL>
+   </DTE>
+
+   <DTE>
+      <TIEMPO>
+         Guatemala, Proyecto #3
+         15/01/2021 -------- 15:25 hrs.
+      </TIEMPO>
+      <REFERENCIA>A1994</REFERENCIA>
+      <NIT_EMISOR>7898456</NIT_EMISOR>
+      <NIT_RECEPTOR>7378106</NIT_RECEPTOR>
+      <VALOR>150.00</VALOR>
+      <IVA>12.00</IVA>
+      <TOTAL>550.50</TOTAL>
+   </DTE>
+
+   <DTE>
+      <TIEMPO>
+         Ciudad de Guatemala 
+         -- ## 14/12/2017 // 15:25 hrs
+      </TIEMPO>
+      <REFERENCIA>A1992</REFERENCIA>
+      <NIT_EMISOR>8338817</NIT_EMISOR>
+      <NIT_RECEPTOR>3216548</NIT_RECEPTOR>
+      <VALOR>1364.44</VALOR>
+      <IVA>186.06</IVA>
+      <TOTAL>1550.50</TOTAL>
+   </DTE>
+
+
+</SOLICITUD_AUTORIZACION>
