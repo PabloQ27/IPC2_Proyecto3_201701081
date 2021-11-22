@@ -23,8 +23,8 @@ def home(request):
         temp = archivo2
         archivo = xmltodict.parse(temp)
         json_data = json.dumps(archivo)
-        #print(archivo)
-        print(json_data)
+        
+        #print(archivo["SOLICITUD_AUTORIZACION"]["DTE"][0])
         
         n = str(archivo2).replace('\\n', '\n')
         r = n.replace('\\r', '\r')
@@ -32,22 +32,24 @@ def home(request):
         x= x.replace("'",'')
         x = x.replace('b', '', 1)
         cadena = x.replace('\\t', '    ')
+
         c = {"archivo_xml": cadena}  
         r = requests.post(endpoint+'doc', json = json_data) #aqui se va al back(muestra sin esto)
         return render(request, "index.html", c)
     elif val == 1 and request.method == 'GET' :
         val = 0
+        print("xxxxxxxxxxx")
         r = requests.get(endpoint+'devolver')
         doc = {'xml_salida': r.text}
         print(r.text)
         return render(request, "index.html", doc)
 
     elif val == 0 and request.method == 'GET':
+        
         val=0
         return render(request, "index.html")
     else:
-        #doc_index = loader.get_template('index.html')
-        #docin = doc_index.render()
+        
         print('else')
         return render(request, "index.html")
  
